@@ -1,0 +1,227 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.h-custom {
+    height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+.wrapper {
+    width: 200px;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 15%;
+    transform-origin: 50%;
+    animation: circle7124 0.5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+    0% {
+        top: 60px;
+        height: 5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+    }
+
+    40% {
+        height: 20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+.circle:nth-child(2) {
+    left: 45%;
+    animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: 0.3s;
+}
+
+.shadow {
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 15%;
+    filter: blur(1px);
+    animation: shadow046 0.5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+    0% {
+        transform: scaleX(1.5);
+    }
+
+    40% {
+        transform: scaleX(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scaleX(0.2);
+        opacity: 0.4;
+    }
+}
+
+.shadow:nth-child(4) {
+    left: 45%;
+    animation-delay: 0.2s;
+}
+
+.shadow:nth-child(5) {
+    left: auto;
+    right: 15%;
+    animation-delay: 0.3s;
+}
+
+.color-body {
+    background-color: #212529;
+}
+
+.position {
+    margin-left: 75vh;
+    margin-top: 30vh;
+    margin-bottom: 3%;
+}
+
+.marginlog {
+    margin-left: 160vh;
+}
+
+.fm {
+    margin-left: 70vh;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+.fmd {
+    margin-left: 65vh;
+    margin-top: 5%;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+.planet {
+    display: block;
+    width: 125px;
+    height: 125px;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    background: #fcc96b;
+    background: #fcc96b;
+    background: linear-gradient(
+        180deg,
+        #fcc96b 0%,
+        #fcc96b 15%,
+        #f7ae01 15%,
+        #f7ae01 19%,
+        #fcc96b 19%,
+        #fcc96b 22%,
+        #f7ae01 22%,
+        #f7ae01 28%,
+        #fcc96b 28%,
+        #fcc96b 31%,
+        #fcc96b 33%,
+        #fcc96b 36%,
+        #f7ae01 36%,
+        #f7ae01 48%,
+        #fcc96b 48%,
+        #fcc96b 55%,
+        #f7ae01 55%,
+        #f7ae01 66%,
+        #fcc96b 66%,
+        #fcc96b 70%,
+        #f7ae01 70%,
+        #f7ae01 73%,
+        #fcc96b 73%,
+        #fcc96b 82%,
+        #f7ae01 82%,
+        #c7ba9d 86%,
+        #fcc96b 86%
+    );
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
+        inset 8px -4px 6px rgba(199, 128, 0, 0.5),
+        inset -8px 4px 8px rgba(255, 235, 199, 0.5),
+        inset 20px -5px 12px #f7ae01, 0 0 100px #ffffff59;
+    transform: rotateZ(-15deg);
+}
+
+.planet::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 16px solid #e1a519;
+    border-top-width: 0;
+    border-radius: 50%;
+    box-shadow: 0 -2px 0 #c18620;
+    animation: rings1 0.8s infinite linear;
+}
+
+.planet::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 8px solid #d48b0c;
+    border-top-width: 0;
+    border-radius: 50%;
+    box-shadow: 0 -2px 0 #b99309;
+    animation: rings2 0.8s infinite linear;
+}
+
+@keyframes rings1 {
+    0% {
+        transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+    }
+
+    100% {
+        transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+    }
+}
+
+@keyframes rings2 {
+    0% {
+        transform: rotateX(65deg) rotateZ(0deg) scale(1.7);
+    }
+
+    100% {
+        transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+    }
+}
